@@ -18,7 +18,7 @@ class Analyser extends React.Component {
     this.props.updateCurrentTime(this.audioRef.current.currentTime)
     this.rafId = requestAnimationFrame(this._nextTick)
 
-    if (Math.floor(this.audioRef.current.currentTime) >= 206) {
+    if (Math.floor(this.audioRef.current.currentTime) >= this.props.totalDuration) {
       this.props.showCredit()
       setTimeout(() => {
         cancelAnimationFrame(this.rafId)

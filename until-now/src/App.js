@@ -4,9 +4,10 @@ import Analyser from './Analyser'
 class App extends React.Component {
   state = {
     isShowCredit: false,
+    totalDuration: 206,
     currentTime: 0,
     estimatedIndex: 0,
-    whatever: '',
+    songTitle: 'The Rain - Hingga Detik Ini',
     // thanks: https://lirik.kapanlagi.com/artis/the-rain/hingga-detik-ini/
     lyrics: [
       '',
@@ -109,7 +110,7 @@ class App extends React.Component {
               </h2>
               {this.state.isShowCredit &&
                 <p>
-                  <span>Song by The Rain - Hingga Detik Ini</span>
+                  <span>Song by {this.state.songTitle}</span>
                   {` `}
                   <a href='https://108kb.io'>@108kb</a>
                 </p>
@@ -118,6 +119,7 @@ class App extends React.Component {
           )}
         </div>
         <Analyser
+          totalDuration={this.state.totalDuration}
           showCredit={this._showCredit}
           updateCurrentTime={this._updateCurrentTime}
           audio='/music.mp3'
