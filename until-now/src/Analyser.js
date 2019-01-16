@@ -25,6 +25,11 @@ class Analyser extends React.Component {
       }, 5000)
     }
   }
+  _start = () => {
+    this.audioContext.resume()
+    this.audioRef.current.play()
+    this.setState({ showPlayButton: false })
+  }
   componentDidMount () {
     this.audioContext = new (window.AudioContext || window.webkitAudioContext)()
 
@@ -54,11 +59,6 @@ class Analyser extends React.Component {
     cancelAnimationFrame(this.rafId)
     this.analyser.disconnect()
     this.source.disconnect()
-  }
-  _start = () => {
-    this.audioContext.resume()
-    this.audioRef.current.play()
-    this.setState({ showPlayButton: false })
   }
   render () {
     return (

@@ -38,7 +38,7 @@ class App extends React.Component {
     this.setState({ currentTime: Math.floor(time) })
     this._checkLyrics(this.state.currentTime)
   }
-  _checkLyrics (time) {
+  _checkLyrics = time => {
     let activeLyrics
     // Does JavaScript has Macro or something related with that?
     switch (true) {
