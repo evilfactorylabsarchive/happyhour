@@ -1,0 +1,15 @@
+{
+  "alias": "until.now.sh",
+  "name": "happy-hour-the-rain",
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    {"src": "^/static/(.*)", "dest": "/static/$1"},
+    {"src": "^/favicon.ico", "dest": "/favicon.ico"},
+    {"src": "^/manifest.json", "dest": "/manifest.json"},
+    {"src": "^/music.mp3", "dest": "/music.mp3" },
+    {"src": "^/(.*)", "dest": "/index.html"}
+  ]
+}
