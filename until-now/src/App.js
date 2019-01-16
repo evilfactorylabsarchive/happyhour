@@ -31,6 +31,7 @@ class App extends React.Component {
     // IYKWIM
     window.scrollTo(0, 0)
     document.body.style.overflow = 'hidden'
+    document.getElementsByTagName('audio')[0].style.display = 'none'
   }
   _showCredit = () => {
     this.setState({ isShowCredit: true })
