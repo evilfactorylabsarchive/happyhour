@@ -26,6 +26,12 @@ class Analyser extends React.Component {
     }
   }
   _start = () => {
+    // FIXME: Still don't know why on mobile
+    // Sometimes the state is `running` but
+    // the audio not play (maybe network problem). For now let's fix
+    // this by show the control
+    // ANOTHER FIXME: Safari treat the audio as Live Broadcast
+    // Learn more about that later
     this.audioContext.resume()
     this.audioRef.current.play()
     this.setState({ showPlayButton: false })
@@ -76,6 +82,7 @@ class Analyser extends React.Component {
           bufferLength={this.bufferLength}
         />
         <audio
+          controls={!!navigator.userAgent.match(/iphone|android|blackberry/ig)}
           ref={this.audioRef}
           src={this.props.audio}
         />
