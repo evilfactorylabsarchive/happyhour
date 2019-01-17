@@ -1,0 +1,17 @@
+{
+  "alias": "perih.now.sh",
+  "name": "happy-hour-senja",
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    {"src": "^/static/(.*)", "dest": "/static/$1"},
+    {"src": "^/favicon.ico", "dest": "/favicon.ico"},
+    {"src": "^/manifest.json", "dest": "/manifest.json"},
+    {"src": "^/music.mp3", "dest": "/music.mp3" },
+    {"src": "^/style.css", "dest": "/style.css" },
+    {"src": "^/bg.jpeg", "dest": "/bg.jpeg" },
+    {"src": "^/(.*)", "dest": "/index.html"}
+  ]
+}
