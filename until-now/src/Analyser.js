@@ -7,7 +7,6 @@ class Analyser extends React.Component {
     this.state = {
       showPlayButton: false,
       frequencyData: [],
-      currentTime: 0,
       fftSize: 512 // https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/fftSize
     }
     this.audioRef = React.createRef()
