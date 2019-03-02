@@ -11,7 +11,7 @@
     {"src": "^/manifest.json", "dest": "/manifest.json"},
     {"src": "^/music.mp3", "dest": "/music.mp3" },
     {"src": "^/style.css", "dest": "/style.css" },
-    {"src": "^/bg.jpeg", "dest": "/bg.jpeg" },
+    {"src": "^/bg.jpg", "dest": "/bg.jpg" },
     {"src": "^/(.*)", "dest": "/index.html"}
   ]
 }
