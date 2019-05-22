@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "clean": "rm -rf dist",
+    "bootstrap": "yarn link hell-rust",
+    "build": "yarn clean && webpack --config webpack.config.js",
+    "dev": "webpack-dev-server",
+    "deploy": "now dist --name hell-rust --target production"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.0",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "lit-element": "2.1.0"
+  }
+}
