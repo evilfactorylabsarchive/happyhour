@@ -2,6 +2,8 @@
 
 experiment with Rust + Wasm
 
+[![Screenshot](https://files-fariz.evilfactory.now.sh/)](https://hell-rust.evilfactory.now.sh)
+
 <p align="center">
   https://hell-rust.evilfactory.now.sh
 </p>
