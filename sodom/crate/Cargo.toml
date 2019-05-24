@@ -1,0 +1,28 @@
+[package]
+authors = ["Fariz Rizaldy"]
+name = "sodom"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+cfg-if = "0.1.5"
+wasm-bindgen = "0.2.29"
+dodrio = "0.1.0"
+
+console_error_panic_hook = { version = "0.1.5", optional = true }
+wee_alloc = { version = "0.4.2", optional = true }
+
+[dependencies.web-sys]
+version = "0.3.6"
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
+
+[features]
+default = ["console_error_panic_hook"]
