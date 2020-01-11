@@ -1,0 +1,52 @@
+body {
+  background-color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s all;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+a {
+  color: #ffffff;
+  display: block;
+  font-size: 16px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  opacity: 0.6;
+}
+
+.o-lyrics {
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  height: 200px;
+  left: 0px;
+  margin-top: -100px;
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  transition: 0.3s all;
+  width: 100%;
+  z-index: 1337;
+}
+
+@media screen and (min-width: 60em) {
+  .o-lyrics {
+    font-size: 2rem;
+    height: 500px;
+    left: 50%;
+    margin-left: -333px;
+    margin-top: -250px;
+    width: 666px;
+  }
+}
